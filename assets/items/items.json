@@ -1,0 +1,44 @@
+[
+  {
+	"id": "semillas_maiz",
+	"nombre": "Semillas de Maíz",
+	"image": "res://assets/items/semillas_maiz.tres",
+	"tipo": "semilla"
+  },
+  {
+	"id": "semillas_pasto",
+	"nombre": "Semillas de Pasto",
+	"image": "res://assets/items/semillas_pasto.tres",
+	"tipo": "semilla"
+  },
+  {
+	"id": "semilla_cafe",
+	"nombre": "Semillas de Café",
+	"image": "res://assets/items/semilla_cafe.tres",
+	"tipo": "semilla"
+  },
+  {
+	"id": "pico_mineria",
+	"nombre": "Pico de Hierro",
+	"image": "res://assets/items/pico.tres",
+	"tipo": "herramienta"
+  },
+  {
+	"id": "hoz_recoleccion",
+	"nombre": "Hoz",
+	"image": "res://assets/items/hoz.tres",
+	"tipo": "herramienta"
+  },
+  {
+	"id": "hacha_madera",
+	"nombre": "Hacha",
+	"image": "res://assets/items/hacha.tres",
+	"tipo": "herramienta"
+  },
+  {
+	"id": "martillo_construccion",
+	"nombre": "Martillo",
+	"image": "res://assets/items/martillo.tres",
+	"tipo": "herramienta"
+  }
+]

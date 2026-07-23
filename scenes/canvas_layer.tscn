@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c1eintuy1uqxj"]
+
+[ext_resource type="Script" uid="uid://dwuowpy5gkjny" path="res://scenes/canvas_layer.gd" id="1_ek3oe"]
+[ext_resource type="Texture2D" uid="uid://bsn341xudw7r8" path="res://assets/ui/fondo_reloj.png" id="1_ghj5q"]
+[ext_resource type="Texture2D" uid="uid://bq1ybkwp45t5g" path="res://assets/ui/reloj_y_aguja.png" id="2_ek3oe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mg525"]
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_kfwc7"]
+font_size = 10
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1093228083]
+script = ExtResource("1_ek3oe")
+
+[node name="InterfazReloj" type="Control" parent="." unique_id=613968692]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 127.0
+offset_top = 66.0
+offset_right = 177.0
+offset_bottom = 106.0
+scale = Vector2(2, 2)
+
+[node name="DiscoCiclo" type="Sprite2D" parent="InterfazReloj" unique_id=915350800]
+position = Vector2(-4, -10)
+texture = ExtResource("1_ghj5q")
+offset = Vector2(5, 10)
+hframes = 35
+frame = 17
+
+[node name="TablaYMarco" type="Sprite2D" parent="InterfazReloj" unique_id=589927322]
+position = Vector2(-4, -10)
+texture = ExtResource("2_ek3oe")
+offset = Vector2(4, 10)
+region_enabled = true
+region_rect = Rect2(0, 0, 126, 64)
+
+[node name="Aguja" type="Sprite2D" parent="InterfazReloj" unique_id=19237983]
+position = Vector2(-29, 0)
+texture = ExtResource("2_ek3oe")
+offset = Vector2(29, 0)
+region_enabled = true
+region_rect = Rect2(126, 0, 130, 64)
+
+[node name="TextoDia" type="Label" parent="InterfazReloj" unique_id=500675841]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 0
+offset_left = 8.0
+offset_top = -25.0
+offset_right = 45.0
+offset_bottom = -8.0
+pivot_offset = Vector2(76, 9)
+text = "Day: 1"
+label_settings = SubResource("LabelSettings_mg525")
+
+[node name="TextoHora" type="Label" parent="InterfazReloj" unique_id=1845890427]
+layout_mode = 0
+offset_left = 20.0
+offset_top = -6.0
+offset_right = 46.0
+offset_bottom = 8.0
+text = "12:00"
+label_settings = SubResource("LabelSettings_kfwc7")

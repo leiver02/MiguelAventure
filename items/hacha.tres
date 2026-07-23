@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemBase" format=3 uid="uid://ckqe42m0ejv2v"]
+
+[ext_resource type="Script" uid="uid://c6xipxmcp476u" path="res://scripts/itemization/ItemBase.gd" id="1_opg53"]
+[ext_resource type="Texture2D" uid="uid://cylw1qh55ok2u" path="res://assets/items/hacha.tres" id="1_w38sg"]
+
+[resource]
+script = ExtResource("1_opg53")
+name = "hacha"
+description = "una hacha chevere"
+icon = ExtResource("1_w38sg")
+slot_type = 5
+min_damage = 5
+max_damage = 6
+attack_speed = 2.0
+metadata/_custom_type_script = "uid://c6xipxmcp476u"
