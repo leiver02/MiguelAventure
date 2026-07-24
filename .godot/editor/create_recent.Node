@@ -1,0 +1,10 @@
+Camera2D
+Label
+Sprite2D
+Control
+CanvasLayer
+TileMapLayer
+TileMap
+AnimationPlayer
+CollisionShape2D
+CharacterBody2D
