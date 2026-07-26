@@ -1,0 +1,10 @@
+res://scenes/Main.tscn
+res://addons/copilot-advanced/small_icon.tres
+res://addons/copilot-advanced/large_icon.tres
+res://addons/copilot-advanced/asset/BotTheme.tres
+res://scenes/character_body_2d.tscn
+res://scripts/equipment/EquipmentModel.gd
+res://items/hacha.tres
+res://miguel.gd
+res://addons/copilot-advanced/asset/UserTheme.tres
+res://scripts/inventory/InventorySystem.gd

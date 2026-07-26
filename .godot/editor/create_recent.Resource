@@ -1,2 +1,3 @@
+InventoryConfig
 ItemBase
 AtlasTexture

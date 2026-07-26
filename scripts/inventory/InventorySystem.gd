@@ -144,3 +144,23 @@ func get_item_base(item_id: String) -> ItemBase:
 ## Retrieves the default currency item.
 func get_currency_item() -> ItemBase:
 	return _currency_item
+
+
+func _unhandled_input(event):
+	if event is InputEventMouseButton and event.pressed:
+		if is_holding_item():
+			if event.button_index == MOUSE_BUTTON_LEFT:
+				# Clic izquierdo fuera del inventario: Soltar el objeto
+				# TODO: Aquí puedes instanciar tu escena física (ej. HachaPiso) en el mundo 2D
+				print("Se soltó el objeto: ", get_held_item().base.name)
+				drop_held_item()
+				
+			elif event.button_index == MOUSE_BUTTON_RIGHT:
+				# Clic derecho: Cancelar y devolver el objeto al inventario
+				var canceled_item = get_held_item()
+				drop_held_item()
+				
+				# Buscamos el inventario de donde salió y lo devolvemos a un espacio vacío
+				var parent_inv = get_inventory(canceled_item.parent_inventory)
+				if parent_inv:
+					parent_inv.add_item(canceled_item)

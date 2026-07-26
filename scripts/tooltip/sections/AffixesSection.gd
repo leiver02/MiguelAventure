@@ -6,7 +6,7 @@ const VALUE_CHAR = '#'
 var label_path = "res://scripts/tooltip/sections/labels/AffixesSectionLabel.tscn"
 var regex: RegEx
 
-func applies_to(item: Item) -> bool:
+func applies_to(_item: Item) -> bool:
 	return false
 	#return item.affixes.size() > 0
 

@@ -416,7 +416,7 @@ func _move_between_inventories(slot: InventorySlot) -> bool:
 
 	return true
 
-func _add_item(inventory_item: InventoryItem, slot_index: int, with_affixes: bool = true) -> void:
+func _add_item(inventory_item: InventoryItem, slot_index: int, _with_affixes: bool = true) -> void:
 	inventory_view.set_item(slot_index, inventory_item)
 	items[slot_index] = inventory_item.item
 	inventory_item.mouse_entered.connect(InventorySystem.on_item_hover.bind(inventory_item, true))
@@ -426,8 +426,8 @@ func _add_item(inventory_item: InventoryItem, slot_index: int, with_affixes: boo
 
 	item.changed.connect(_on_item_changed)
 
-	if with_affixes:
-		item.roll_affixes()
+	#if with_affixes:
+	#	item.roll_affixes()
 
 	item.parent_inventory = id
 	item.slot_id = slot_index

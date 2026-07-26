@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://deql52je5fydw"]
+
+[ext_resource type="PackedScene" uid="uid://bbxhc78l00j5a" path="res://scenes/floor.tscn" id="1_rvslj"]
+[ext_resource type="PackedScene" uid="uid://cqkg832frjr01" path="res://example/scenes/HachaPiso.tscn" id="2_0bbpv"]
+[ext_resource type="PackedScene" uid="uid://dx4lqmsnb6857" path="res://example/scenes/player_inventory.tscn" id="3_rarhs"]
+[ext_resource type="Resource" uid="uid://bu7xi6rajlx0w" path="res://player_config.tres" id="4_c01mt"]
+[ext_resource type="PackedScene" uid="uid://dr7liessjpvcn" path="res://example/scenes/player_equipment.tscn" id="4_vcsgt"]
+[ext_resource type="PackedScene" uid="uid://dfo6atm4fkkgd" path="res://scenes/quantity_selector.tscn" id="6_c01mt"]
+[ext_resource type="PackedScene" uid="uid://7oswlw660qvn" path="res://scenes/equipment_slot.tscn" id="6_nxtc6"]
+
+[node name="Main" type="Node2D" unique_id=1397985924]
+
+[node name="Node2D" parent="." unique_id=1685559334 instance=ExtResource("1_rvslj")]
+position = Vector2(432, 211)
+
+[node name="HachaPiso" parent="." unique_id=1309569118 instance=ExtResource("2_0bbpv")]
+position = Vector2(72, 87)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=116834968]
+
+[node name="PlayerInventory" parent="CanvasLayer" unique_id=423268025 instance=ExtResource("3_rarhs")]
+config = ExtResource("4_c01mt")
+
+[node name="PlayerEquipment" parent="CanvasLayer" unique_id=2139176851 node_paths=PackedStringArray("slots") instance=ExtResource("4_vcsgt")]
+slots = {
+5: NodePath("MarginContainer/Control/VBoxContainer/Weapon")
+}
+id = "equipment"
+
+[node name="Weapon" parent="CanvasLayer/PlayerEquipment/MarginContainer/Control/VBoxContainer" parent_id_path=PackedInt32Array(2139176851, 1898594010) index="4" unique_id=1267405480 instance=ExtResource("6_nxtc6")]
+layout_mode = 2
+slot_type = 5
+
+[node name="QuantitySelector" parent="CanvasLayer" unique_id=2020976713 groups=["QuantitySelector"] instance=ExtResource("6_c01mt")]
+visible = false
+
+[editable path="CanvasLayer/PlayerInventory"]
+[editable path="CanvasLayer/PlayerEquipment"]

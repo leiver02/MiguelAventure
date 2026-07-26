@@ -4,7 +4,9 @@ extends TooltipSection
 var label_path = "res://scripts/tooltip/sections/labels/PriceSectionLabel.tscn"
 
 func applies_to(item: Item) -> bool:
-	return item.get_worth() > 0 and InventorySystem.get_inventory("vendor").visible
+	var vendor_inventory = InventorySystem.get_inventory("vendor")
+	# Primero revisa si el valor es mayor a 0, luego si el vendedor existe, y por último si está visible
+	return item.get_worth() > 0 and vendor_inventory != null and vendor_inventory.visible
 
 func append(item: Item, tooltip: ItemTooltip) -> void:
 	tooltip.add_spacer()

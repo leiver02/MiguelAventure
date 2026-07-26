@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cqkg832frjr01"]
+
+[ext_resource type="Script" uid="uid://djly7q38lcx4r" path="res://example/scenes/hacha_piso.gd" id="1_hkimi"]
+[ext_resource type="Texture2D" uid="uid://cylw1qh55ok2u" path="res://assets/items/hacha.tres" id="2_06dq3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h8xyc"]
+radius = 48.83646
+
+[node name="HachaPiso" type="Area2D" unique_id=1309569118]
+script = ExtResource("1_hkimi")
+
+[node name="Hacha" type="Sprite2D" parent="." unique_id=383085043]
+position = Vector2(539, 312)
+texture = ExtResource("2_06dq3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1207486459]
+position = Vector2(541, 323)
+shape = SubResource("CircleShape2D_h8xyc")

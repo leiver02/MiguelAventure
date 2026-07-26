@@ -1,9 +1,10 @@
-extends Control
-## Displays a tooltip for an item when hovered over.
-##
-## Shows item name, description, stats, etc.
+extends MarginContainer
+
+# Displays a tooltip foar an item when hovered over.
+# Shows item name, description, stats, etc.
 
 @export var hbox_container: HBoxContainer
+
 @export_group("Current Item")
 @export var container_current: Control
 @export var margin_container_current: MarginContainer

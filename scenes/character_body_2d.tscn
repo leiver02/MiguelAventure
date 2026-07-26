@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dhbbnwxsewbmj"]
 
 [ext_resource type="Script" uid="uid://w7j60gck3dty" path="res://miguel.gd" id="1_lj8jo"]
+[ext_resource type="Texture2D" uid="uid://cylw1qh55ok2u" path="res://assets/items/hacha.tres" id="2_g2brh"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nckey"]
 load_path = "res://.godot/imported/untitled.png-cd85099340b2edec3d9e224b39a98746.ctex"
@@ -21,6 +22,123 @@ tracks/0/keys = {
 "update": 1,
 "values": [10]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mano:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(19, -5)]
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mano/Hacha:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mano/Hacha:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-11, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mano/Hacha:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.17278759, -0.2, 0, 0.2, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Mano/Hacha:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_t53lx"]
+resource_name = "attack_SE"
+length = 0.4
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(5, -0.2, 0, 0.2, 0, 6, -0.005555556, -0.16666667, 0, 0, 4, -0.038888894, 0.33333337, 0, 0),
+"times": PackedFloat32Array(0.033333335, 0.06666667, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mano/Hacha:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 0, 2, 2, 2),
+"points": PackedFloat32Array(2.0000005, 0, 0, 0.011111112, 1.3333333, 10, -0.2, 0, 0.2, 0, 7, -0.005555555, 0.13896511, 0.038888894, -0.97275597, 5.967167, -0.008333335, 0.13108309, 0.030555557, -0.48063794, 3.3296738, -0.03888889, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.06666667, 0.1, 0.15, 0.33333334)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mano/Hacha:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(2, 0, 2, 2, 2),
+"points": PackedFloat32Array(-17.000002, 0, 0, 0.011111112, 0.50000036, -14, -0.2, 0, 0.2, 0, -18, -0.005555555, 0.031364396, 0.038888894, -0.21955082, -17.674387, -0.008333335, -0.08908961, 0.030555557, 0.32666185, -15.505491, -0.03888889, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.06666667, 0.1, 0.15, 0.33333334)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mano/Hacha:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 2),
+"points": PackedFloat32Array(-0.68765974, 0, 0, 0.01666667, 0, -0.68765974, -0.016666668, -0.025743607, 0.038888894, 0.06006842, -0.2932153, -0.008333335, -0.018388292, 0.030555557, 0.06742373, -0.17278759, -0.03888889, -0.08581203, 0, 0),
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.33333334)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mano/Hacha:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_dn4c7"]
 resource_name = "idle_SE"
@@ -36,6 +154,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [1]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mano:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(18.670328, -5.4945087)]
+}
 
 [sub_resource type="Animation" id="Animation_4vejd"]
 resource_name = "idle_SO"
@@ -50,6 +180,40 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [10]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mano/Hacha:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-10.999998, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mano/Hacha:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-14, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mano/Hacha:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_ws0vm"]
@@ -67,6 +231,52 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mano:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(18.670328, -5.4945087), Vector2(19, -5), Vector2(15, -11), Vector2(15, -13), Vector2(17, -8)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mano/Hacha:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mano/Hacha:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2),
+"points": PackedFloat32Array(10, -0.25, 0, 0.25, 0, 12, -0.016666668, -0.33333334, 0, 0, 10, -0.033333335, 0.33333334, 0, 0, 10.442667, -0.016683336, -0.07377784, 0, 0),
+"times": PackedFloat32Array(0.1, 0.2, 0.4, 0.5001)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mano/Hacha:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2),
+"points": PackedFloat32Array(-14, -0.25, 0, 0.25, 0, -11, -0.016666668, -0.5, 0, 0, -14, -0.033333335, 0.5, 0, 0, -11.835999, -0.016683336, -0.36066696, 0, 0),
+"times": PackedFloat32Array(0.1, 0.2, 0.4, 0.5001)
 }
 
 [sub_resource type="Animation" id="Animation_rhr3r"]
@@ -89,6 +299,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t53lx"]
 _data = {
 &"RESET": SubResource("Animation_g2brh"),
+&"attack_SE": SubResource("Animation_t53lx"),
 &"idle_SE": SubResource("Animation_dn4c7"),
 &"idle_SO": SubResource("Animation_4vejd"),
 &"walk_SE": SubResource("Animation_ws0vm"),
@@ -115,3 +326,12 @@ libraries/ = SubResource("AnimationLibrary_t53lx")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1808842884]
 position_smoothing_enabled = true
+
+[node name="Mano" type="Marker2D" parent="." unique_id=166217814]
+position = Vector2(19, -5)
+
+[node name="Hacha" type="Sprite2D" parent="Mano" unique_id=2039708376]
+position = Vector2(12, -11)
+rotation = -0.17278759
+scale = Vector2(0.3663362, 0.30018142)
+texture = ExtResource("2_g2brh")

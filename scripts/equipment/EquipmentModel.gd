@@ -63,7 +63,8 @@ func _on_slot_clicked(slot: EquipmentSlot, button: MouseButton) -> void:
 		remove_item_at(slot_type)
 		InventorySystem.get_player_inventory().add_item(equipment_item.item)
 
-func equip_item(item: Item) -> int:
+# CORREGIDO: Cambiado "-> int" a "-> bool" para evitar el error de Parseo (Parse Error)
+func equip_item(item: Item) -> bool:
 	if not item:
 		return false
 	
@@ -108,8 +109,15 @@ func add_item_at(item: Item, slot_type: ItemBase.SlotType) -> bool:
 	if items.has(slot_type):
 		return false
 	
+	# --- TRAMPAS AÑADIDAS AQUÍ ---
+	print("🔍 COMPARANDO: Tipo del hacha = ", item.base.slot_type, " | Tipo de la ranura UI = ", slot_type)
+	
 	if item.base.slot_type != slot_type:
+		print("❌ RECHAZADO: Los tipos no coinciden exactamente para Godot.")
 		return false
+		
+	print("✅ ACEPTADO: ¡Los tipos son idénticos y el ítem entró!")
+	# -----------------------------
 
 	var equipment_item = InventoryItem.new()
 	equipment_item.set_item(item)
