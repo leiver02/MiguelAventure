@@ -6,7 +6,9 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nckey"]
 load_path = "res://.godot/imported/untitled.png-cd85099340b2edec3d9e224b39a98746.ctex"
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lj8jo"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2brh"]
+radius = 20.0
+height = 108.0
 
 [sub_resource type="Animation" id="Animation_g2brh"]
 length = 0.001
@@ -79,6 +81,30 @@ tracks/5/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Mano/Hacha:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15.670328, -1.5054901)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sprite2D:flip_h")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_t53lx"]
 resource_name = "attack_SE"
@@ -102,7 +128,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(2, 0, 2, 2, 2),
-"points": PackedFloat32Array(2.0000005, 0, 0, 0.011111112, 1.3333333, 10, -0.2, 0, 0.2, 0, 7, -0.005555555, 0.13896511, 0.038888894, -0.97275597, 5.967167, -0.008333335, 0.13108309, 0.030555557, -0.48063794, 3.3296738, -0.03888889, 0, 0, 0),
+"points": PackedFloat32Array(1.9861741, 0, 0, 0.011111112, 1.3356378, 10, -0.2, 0, 0.2, 0, 7, -0.005555555, 0.13896511, 0.038888894, -0.97275597, 5.967167, -0.008333335, 0.13108309, 0.030555557, -0.48063794, 3.3296738, -0.03888889, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.06666667, 0.1, 0.15, 0.33333334)
 }
 tracks/2/type = "bezier"
@@ -113,7 +139,7 @@ tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(2, 0, 2, 2, 2),
-"points": PackedFloat32Array(-17.000002, 0, 0, 0.011111112, 0.50000036, -14, -0.2, 0, 0.2, 0, -18, -0.005555555, 0.031364396, 0.038888894, -0.21955082, -17.674387, -0.008333335, -0.08908961, 0.030555557, 0.32666185, -15.505491, -0.03888889, 0, 0, 0),
+"points": PackedFloat32Array(-18.14483, 0, 0, 0.011111112, 0.6908052, -14, -0.2, 0, 0.2, 0, -18, -0.005555555, 0.031364396, 0.038888894, -0.21955082, -17.674387, -0.008333335, -0.08908961, 0.030555557, 0.32666185, -15.505491, -0.03888889, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.06666667, 0.1, 0.15, 0.33333334)
 }
 tracks/3/type = "bezier"
@@ -124,7 +150,7 @@ tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "handle_modes": PackedInt32Array(2, 2, 2, 2),
-"points": PackedFloat32Array(-0.68765974, 0, 0, 0.01666667, 0, -0.68765974, -0.016666668, -0.025743607, 0.038888894, 0.06006842, -0.2932153, -0.008333335, -0.018388292, 0.030555557, 0.06742373, -0.17278759, -0.03888889, -0.08581203, 0, 0),
+"points": PackedFloat32Array(-0.6195919, 0, 0, 0.016666668, -0.011344642, -0.68765974, -0.016666668, -0.025743607, 0.038888894, 0.06006842, -0.2932153, -0.008333335, -0.018388292, 0.030555557, 0.06742373, -0.17278759, -0.03888889, -0.08581203, 0, 0),
 "times": PackedFloat32Array(0, 0.1, 0.15, 0.33333334)
 }
 tracks/4/type = "value"
@@ -134,10 +160,86 @@ tracks/4/path = NodePath("Mano/Hacha:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0.4),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_yi2kj"]
+resource_name = "attack_SO"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [5, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mano/Hacha:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mano/Hacha:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-16.670322, -6.5054913), Vector2(-16.670328, -9.50549), Vector2(-9.670328, -8.505491)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mano/Hacha:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [-0.17278759, -0.0418879, -0.17278759]
 }
 
 [sub_resource type="Animation" id="Animation_dn4c7"]
@@ -278,6 +380,18 @@ tracks/4/keys = {
 "points": PackedFloat32Array(-14, -0.25, 0, 0.25, 0, -11, -0.016666668, -0.5, 0, 0, -14, -0.033333335, 0.5, 0, 0, -11.835999, -0.016683336, -0.36066696, 0, 0),
 "times": PackedFloat32Array(0.1, 0.2, 0.4, 0.5001)
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_rhr3r"]
 resource_name = "walk_SO"
@@ -295,16 +409,55 @@ tracks/0/keys = {
 "update": 1,
 "values": [10, 11, 12, 13, 14, 15, 16]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mano/Hacha:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mano/Hacha:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-24.670326, -7.505492), Vector2(-17.670326, -9.505491), Vector2(-9.670324, -6.5054913), Vector2(-14.670327, -5.5054917), Vector2(-25.670328, -9.505493), Vector2(-12.670326, -4.5054913)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mano/Hacha:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [-0.17278759, -0.17278759, -0.17278759, -0.17278759, -0.24085544]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t53lx"]
 _data = {
 &"RESET": SubResource("Animation_g2brh"),
 &"attack_SE": SubResource("Animation_t53lx"),
+&"attack_SO": SubResource("Animation_yi2kj"),
 &"idle_SE": SubResource("Animation_dn4c7"),
 &"idle_SO": SubResource("Animation_4vejd"),
 &"walk_SE": SubResource("Animation_ws0vm"),
 &"walk_SO": SubResource("Animation_rhr3r")
 }
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2brh"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1469375573]
 z_index = 2
@@ -314,12 +467,13 @@ script = ExtResource("1_lj8jo")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=39223776]
 texture_filter = 1
 texture = SubResource("CompressedTexture2D_nckey")
+flip_h = true
 hframes = 17
 frame = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1342111003]
-position = Vector2(2, 24)
-shape = SubResource("CircleShape2D_lj8jo")
+position = Vector2(1, -9)
+shape = SubResource("CapsuleShape2D_g2brh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1598076239]
 libraries/ = SubResource("AnimationLibrary_t53lx")
@@ -331,7 +485,14 @@ position_smoothing_enabled = true
 position = Vector2(19, -5)
 
 [node name="Hacha" type="Sprite2D" parent="Mano" unique_id=2039708376]
-position = Vector2(12, -11)
+position = Vector2(-15.670328, -1.5054901)
 rotation = -0.17278759
-scale = Vector2(0.3663362, 0.30018142)
+scale = Vector2(0.3519302, 0.3159194)
 texture = ExtResource("2_g2brh")
+
+[node name="AreaAtaque" type="Area2D" parent="Mano" unique_id=1430303527]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mano/AreaAtaque" unique_id=1751374513]
+position = Vector2(4.7651196, -10.30097)
+scale = Vector2(-1.907625, -1.0744286)
+shape = SubResource("CircleShape2D_g2brh")

@@ -1,38 +1,64 @@
 [gd_scene format=3 uid="uid://deql52je5fydw"]
 
 [ext_resource type="PackedScene" uid="uid://bbxhc78l00j5a" path="res://scenes/floor.tscn" id="1_rvslj"]
+[ext_resource type="Script" uid="uid://p3i8xby4f35l" path="res://scenes/main.gd" id="1_vcsgt"]
 [ext_resource type="PackedScene" uid="uid://cqkg832frjr01" path="res://example/scenes/HachaPiso.tscn" id="2_0bbpv"]
-[ext_resource type="PackedScene" uid="uid://dx4lqmsnb6857" path="res://example/scenes/player_inventory.tscn" id="3_rarhs"]
-[ext_resource type="Resource" uid="uid://bu7xi6rajlx0w" path="res://player_config.tres" id="4_c01mt"]
-[ext_resource type="PackedScene" uid="uid://dr7liessjpvcn" path="res://example/scenes/player_equipment.tscn" id="4_vcsgt"]
-[ext_resource type="PackedScene" uid="uid://dfo6atm4fkkgd" path="res://scenes/quantity_selector.tscn" id="6_c01mt"]
-[ext_resource type="PackedScene" uid="uid://7oswlw660qvn" path="res://scenes/equipment_slot.tscn" id="6_nxtc6"]
+[ext_resource type="PackedScene" uid="uid://crhc2q0nwogu5" path="res://scenes/arbol.tscn" id="3_0bbpv"]
+[ext_resource type="Texture2D" uid="uid://vpcrshceh1o4" path="res://carrot-removebg-preview.png" id="4_rarhs"]
+[ext_resource type="PackedScene" uid="uid://cta07srtmkurp" path="res://scenes/enemigo.tscn" id="6_c01mt"]
 
 [node name="Main" type="Node2D" unique_id=1397985924]
+script = ExtResource("1_vcsgt")
 
 [node name="Node2D" parent="." unique_id=1685559334 instance=ExtResource("1_rvslj")]
-position = Vector2(432, 211)
+position = Vector2(445, 211)
 
 [node name="HachaPiso" parent="." unique_id=1309569118 instance=ExtResource("2_0bbpv")]
 position = Vector2(72, 87)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=116834968]
+[node name="StaticBody2D" parent="." unique_id=197184466 instance=ExtResource("3_0bbpv")]
+position = Vector2(362.93756, 421.26105)
+scale = Vector2(1.2938665, 1.2602224)
 
-[node name="PlayerInventory" parent="CanvasLayer" unique_id=423268025 instance=ExtResource("3_rarhs")]
-config = ExtResource("4_c01mt")
+[node name="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=1740799716]
+position = Vector2(34.827744, -50.198322)
+rotation = 3.1415927
+scale = Vector2(20.395462, -1.5677297)
 
-[node name="PlayerEquipment" parent="CanvasLayer" unique_id=2139176851 node_paths=PackedStringArray("slots") instance=ExtResource("4_vcsgt")]
-slots = {
-5: NodePath("MarginContainer/Control/VBoxContainer/Weapon")
-}
-id = "equipment"
+[node name="Sprite2D" parent="StaticBody2D" index="1" unique_id=474594791]
+position = Vector2(28.644716, -66.862045)
 
-[node name="Weapon" parent="CanvasLayer/PlayerEquipment/MarginContainer/Control/VBoxContainer" parent_id_path=PackedInt32Array(2139176851, 1898594010) index="4" unique_id=1267405480 instance=ExtResource("6_nxtc6")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1770090671]
+
+[node name="ContenedorZanahorias" type="HBoxContainer" parent="CanvasLayer" unique_id=2023376386]
+anchors_preset = -1
+anchor_right = 0.16900001
+anchor_bottom = 0.18100001
+offset_left = 110.0
+offset_top = 128.0
+offset_right = -37.68802
+offset_bottom = 55.71199
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/ContenedorZanahorias" unique_id=555087547]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-slot_type = 5
+texture = ExtResource("4_rarhs")
+expand_mode = 1
 
-[node name="QuantitySelector" parent="CanvasLayer" unique_id=2020976713 groups=["QuantitySelector"] instance=ExtResource("6_c01mt")]
-visible = false
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ContenedorZanahorias" unique_id=475126085]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("4_rarhs")
+expand_mode = 1
 
-[editable path="CanvasLayer/PlayerInventory"]
-[editable path="CanvasLayer/PlayerEquipment"]
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/ContenedorZanahorias" unique_id=1056213814]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("4_rarhs")
+expand_mode = 1
+
+[node name="Enemigo" parent="." unique_id=1768970075 instance=ExtResource("6_c01mt")]
+position = Vector2(983, 255)
+
+[editable path="Node2D"]
+[editable path="StaticBody2D"]
