@@ -103,27 +103,41 @@ func actualizar_posicion_hacha() -> void:
 		sprite_hacha.flip_h = false
 
 func recibir_dano(cantidad: int) -> void:
-	# 1. Si Miguel es invulnerable, bloqueamos el daño y salimos de la función
 	if es_invulnerable:
 		return
 
-	# 2. Si no es invulnerable, recibe el golpe normalmente
 	vida_actual -= cantidad
-	emit_signal("vida_cambiada", vida_actual) # Le gritamos a la UI que nos pegaron
+	emit_signal("vida_cambiada", vida_actual)
 	print("💔 ¡Ouch! Zanahorias restantes: ", vida_actual)
 	
 	if vida_actual <= 0:
-		print("💀 Miguel murió...")
-		# Aquí puedes poner: queue_free(), recargar la escena, etc.
-		return # Salimos para no ejecutar el resto si ya murió
+		morir()
+		return
 
 	# --- INICIO DE INVULNERABILIDAD ---
 	es_invulnerable = true
-	sprite.modulate.a = 0.5 # Hacemos a Miguel un 50% transparente
+	sprite.modulate.a = 0.5
 	
-	# Esperamos 1.5 segundos (tiempo de inmunidad)
 	await get_tree().create_timer(1.5).timeout
 	
-	# Devolvemos a Miguel a la normalidad
-	sprite.modulate.a = 1.0 # 100% visible
-	es_invulnerable = false
+	# Verificamos si Miguel sigue vivo después del timer antes de restaurar su opacidad
+	if is_instance_valid(self) and vida_actual > 0:
+		sprite.modulate.a = 1.0
+		es_invulnerable = false
+
+
+func morir() -> void:
+	print("💀 Miguel murió...")
+	
+	# 1. Desactivamos el procesamiento físico para que no pueda moverse ni atacar
+	set_physics_process(false)
+	set_process_unhandled_input(false)
+	
+	# 2. Ocultamos el personaje de inmediato
+	hide()
+	
+	# 3. Desactivamos sus colisiones para que los enemigos no le sigan pegando
+	$CollisionShape2D.set_deferred("disabled", true)
+	
+	# 4. Eliminamos el nodo de la escena
+	queue_free()
