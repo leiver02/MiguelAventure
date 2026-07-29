@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bd12kwwjlmfhe"]
+
+[ext_resource type="Script" uid="uid://vvo28l261g37" path="res://scenes/pantalla_muerte.gd" id="1_26hv5"]
+[ext_resource type="Texture2D" uid="uid://bkb4eydysrwcf" path="res://assets/ui/pantalla_muerte.png" id="2_0g6jd"]
+
+[node name="PantallaMuerte" type="Node2D" unique_id=1496520548]
+
+[node name="PantallaMuerte" type="CanvasLayer" parent="." unique_id=1132430923]
+process_mode = 3
+script = ExtResource("1_26hv5")
+
+[node name="TextureRect" type="TextureRect" parent="PantallaMuerte" unique_id=1170290234]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0g6jd")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PantallaMuerte" unique_id=1484596780]
+offset_left = 331.0
+offset_top = 414.0
+offset_right = 842.0
+offset_bottom = 504.0
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="PantallaMuerte/VBoxContainer" unique_id=1353034164]
+layout_mode = 2
+text = "Reintentar"
+flat = true
+
+[node name="Button2" type="Button" parent="PantallaMuerte/VBoxContainer" unique_id=1977934118]
+layout_mode = 2
+text = "volver al inicio
+"
+flat = true
+
+[connection signal="pressed" from="PantallaMuerte/VBoxContainer/Button" to="PantallaMuerte" method="_on_boton_reintentar_pressed"]
+[connection signal="pressed" from="PantallaMuerte/VBoxContainer/Button2" to="PantallaMuerte" method="_on_boton_menu_pressed"]

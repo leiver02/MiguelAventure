@@ -7,3 +7,7 @@ res://example/items/sword.tres
 res://example/items/armor.tres
 res://example/items/ring.tres
 res://example/items/health_potion.tres
+res://scenes/pantalla_muerte.gd
+res://scenes/PantallaMuerte.tscn
+res://scenes/PantallaInico.tscn
+res://scenes/pantalla_inicio.gd

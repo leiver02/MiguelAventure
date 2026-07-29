@@ -21,12 +21,12 @@ position = Vector2(362.93756, 421.26105)
 scale = Vector2(1.2938665, 1.2602224)
 
 [node name="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=1740799716]
-position = Vector2(34.827744, -50.198322)
+position = Vector2(20.915953, -34.32811)
 rotation = 3.1415927
 scale = Vector2(20.395462, -1.5677297)
 
 [node name="Sprite2D" parent="StaticBody2D" index="1" unique_id=474594791]
-position = Vector2(28.644716, -66.862045)
+position = Vector2(17.051558, -50.99183)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1770090671]
 

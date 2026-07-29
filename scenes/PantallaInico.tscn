@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ttpm3vncvqyj"]
+
+[ext_resource type="Script" uid="uid://bpdibe2yt3rc7" path="res://scenes/pantalla_inicio.gd" id="1_5kgoh"]
+[ext_resource type="Texture2D" uid="uid://0jf0xk24wny3" path="res://assets/ui/pantalla_inicio.png" id="2_5kgoh"]
+
+[node name="PantallaInicio" type="Node2D" unique_id=1496520548]
+
+[node name="PantallaInicio" type="CanvasLayer" parent="." unique_id=1132430923]
+process_mode = 3
+script = ExtResource("1_5kgoh")
+
+[node name="TextureRect" type="TextureRect" parent="PantallaInicio" unique_id=1170290234]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5kgoh")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PantallaInicio" unique_id=1484596780]
+offset_left = 331.0
+offset_top = 414.0
+offset_right = 842.0
+offset_bottom = 572.0
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="PantallaInicio/VBoxContainer" unique_id=1353034164]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Comenzar aventura"
+flat = true
+
+[node name="Button2" type="Button" parent="PantallaInicio/VBoxContainer" unique_id=1977934118]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Salir"
+flat = true
+
+[connection signal="pressed" from="PantallaInicio/VBoxContainer/Button" to="PantallaInicio" method="_on_button_pressed"]
+[connection signal="pressed" from="PantallaInicio/VBoxContainer/Button2" to="PantallaInicio" method="_on_button_2_pressed"]
